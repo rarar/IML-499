@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--HAS A DOCTYPE-->
+<html lang="en"><!--HAS A ROOT AND A LANGUAGE-->
+<head><!--HAS A HEAD FOR THE BROWSER AND ROBOTS TO READ-->
+    <meta charset="utf-8" /><!--HAS ENCODING-->
+	<title>[sort of] Minimal HTML5 Template</title>
+	<link rel="stylesheet" type="text/css" href="css/html5-doctor-reset-stylesheet.css" />
+	<link rel="shortcut icon" href="http://www.tinyiconfactory.com/images/icons/270540.png" />
+	<style>
+	body{
+		background:black;
+		font-family: courier new;
+	}
+	h1{
+		position:absolute;
+		font-size: 300%;
+		color: white;
+	}
+	img{
+		width:32%;
+	}
+	</style>
+	<script type="application/x-javascript">
+	var n = 0;
+	var colors = ["Gold", "White", "Lime", "Yellow", "Deeppink", "Dodgerblue", "Purple", "Crimson", "Fuchsia", "GreenYellow", "Hotpink"];
+	function increment() {
+            setTimeout(function () {
+                if (n <= 333){
+                	if (n % 11 == 3) console.log(n);
+                	document.getElementsByTagName("h1")[0].appendChild(document.createTextNode(" " + n));
+                	n = n+1;
+                }
+                increment();
+            }, 50);
+        }
+
+        window.onload = function () {
+            increment();
+        }
+    </script>
+</head>
+<body><!--HAS A BODY FOR THE BROWSER TO DISPLAY AND FOR HUMANS TO SEE-->
+	<h1>Hello IML 400!</h1>
+	<img src="http://scontent-a-lax.cdninstagram.com/hphotos-xpf1/t51.2885-15/10518203_1610544619171945_244945035_n.jpg" />
+	<img src="http://temp-art.raphaelarar.com/wp-content/uploads/2013/04/Pathways-Birdwatching.jpg" />
+	<img src="http://photos-b.ak.instagram.com/hphotos-ak-xap1/t51.2885-15/10683871_343484472494025_775122227_n.jpg" />
+
+	<img src="http://scontent-a-lax.cdninstagram.com/hphotos-xap1/t51.2885-15/10661229_843447505699633_1397505754_n.jpg" />
+	<img src="http://photos-h.ak.instagram.com/hphotos-ak-xpa1/t51.2885-15/10522262_464884110318623_932389182_n.jpg" />
+	<img src="http://temp-art.raphaelarar.com/wp-content/uploads/2013/04/Pathways-Locusts.jpg" />
+
+	<script type="application/x-javascript">
+	window.onclick = function () {
+		var mycolor = colors[Math.floor(Math.random() * colors.length)];
+		document.getElementsByTagName("body")[0].style.backgroundColor = mycolor;
+		console.log(mycolor);
+		document.getElementsByTagName("h1")[0].innerHTML = "Hello IML 400! " + mycolor;
+		n = 0;
+	}
+	</script>
+</body>
+</html>
